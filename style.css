@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--LGB);
+}
+
+:root {
+    font-size: 10px;
+    --VDGB: hsl(217, 19%, 35%);
+    --DDB: hsl(214, 17%, 51%);
+    --GB: hsl(212, 23%, 69%);
+    --LGB: hsl(210, 46%, 95%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%;
+    margin:  0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.img-container {
+    float: left;
+    width: 35%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.img-container img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.content-container {
+    float: left;
+    width: 65%;
+
+    
+}
+
+.text-container {
+    width: 100%;
+    padding: 10px 50px 0 50px;
+}
+
+.text-container h3 {
+    font-size: 2.0rem;
+    margin-bottom: 5px;
+    color: var(--VDGB);
+}
+
+.text-container p {
+    font-size: 1.3rem;
+    color: var(--GB);
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+
+.info-container {
+    position: relative;
+    width: 100%;
+}
+.info-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.info-container .avatar-container {
+    float: left;
+    display: flex;
+}
+
+.avatar-container .avatar-img {
+    flex: 30%;
+    padding-right: 20px;
+}
+
+.avatar-container .avatar-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.avatar-container .avatar-name {
+    flex: 65%;
+}
+
+.avatar-name .name {
+    margin-bottom: 3px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--VDGB);
+}
+
+.avatar-name .date {
+    color: var(--GB);
+    font-size: 1.3rem;
+}
+
+
+.info-container {
+    padding: 10px 50px 0 50px;
+}
+
+.info-container .social {
+    float: right;
+    background-color: var(--LGB);
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.social .share-img {
+    padding: 7px;
+}
+
+#none {
+    display: none;
+    width: 100%;
+}
+
+
+.info-container #none .network {
+    position: absolute;
+    bottom: 123%;
+    right: -20%;
+    background-color: var(--VDGB);
+    color: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    z-index: 11;
+    box-shadow: 0px 7px 15px var(--LGB);
+
+    display: flex;
+    align-items: center;
+}
+
+.network::after {
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: var(--VDGB) transparent transparent transparent;
+    position: absolute;
+    bottom: -13px;
+    left: 45%;
+}
+
+.network .share {
+    font-size: 1.1rem;
+    letter-spacing: 2.5px;
+    color: var(--DDB);
+    margin-right: 5px;
+}
+
+.network .platform {
+    margin:  0 15px 0 5px;
+}
+
+.platform img {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.network .not-seen {
+    display: none;
+    padding: 7px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--DDB);
+}
+
+
+@media screen and (max-width: 1150px) {
+    .container {
+        width: 65%;
+    }
+    /* .text-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .text-container p {
+        font-size: 1rem;
+    }
+
+    .avatar-container .avatar-img img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .avatar-name .name {
+        font-size: 1rem;
+    }
+
+    .avatar-name .date {
+        font-size: 1rem;
+    } */
+}
+
+@media screen and (max-width: 1050px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .container {
+        width: 85%;
+    }
+
+    .text-container h3 {
+        font-size: 1.6rem;
+    }
+
+    .text-container p {
+        font-size: 1.3rem;
+    }
+
+    .avatar-container .avatar-img img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .avatar-name .name {
+        font-size: 1rem;
+    }
+
+    .avatar-name .date {
+        font-size: 1rem;
+    }
+}
+
+/* @media screen and (max-width: 980px) {
+    .container {
+        width: 80%;
+    }
+} */
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 85%;
+    }
+
+    .text-container h3 {
+        font-size: 1.4rem;
+    }
+
+    .text-container p {
+        font-size: 1.1rem;
+    }
+
+    .avatar-container .avatar-img img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .avatar-name .name {
+        font-size: 1rem;
+    }
+
+    .avatar-name .date {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 85%;
+    }
+
+    .text-container h3 {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    .container {
+        width: 60%;
+    }
+
+    .img-container {
+        float: none;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .content-container {
+        float: none;
+        width: 100%;
+    }
+
+    .info-container #none .network {
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .avatar-container {
+        padding-bottom: 15px;
+    }
+
+    .network::after {
+        content: "";
+        border-width: none;
+        border-color: transparent;
+    }
+
+    .text-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .avatar-container .avatar-img img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .avatar-name .name {
+        margin-bottom: 3px;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--VDGB);
+    }
+
+    .info-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .info-container #none .network {
+        justify-content: space-around;
+        border-radius:  0 0 7px 7px;
+    }
+
+    .network .platform {
+        margin-left: -50px;
+    }
+
+    .network .not-seen {
+        display: block;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .container {
+        width: 90%;
+    }
+}
